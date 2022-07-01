@@ -5,6 +5,8 @@ let checkbox;
 
 var barva1 = 250;
 
+
+
 function myCheckedEvent() {
   if (checkbox.checked()) {
     loop();
@@ -29,7 +31,7 @@ function myCheckedEvent2() {
 
 
 function setup() {
-  var canvas = createCanvas(windowWidth / 2.5, windowHeight / 2.8);
+  var canvas = createCanvas(windowWidth -10  , windowHeight -12);
   
   noFill();
  
@@ -40,23 +42,28 @@ function setup() {
   fft = new p5.FFT();
   fft.setInput(mic);
 
-  slider = createSlider(0, 10, 1);
  
-  slider2 = createSlider(0, 10, 1);
+
+
+
+
+  slider = createSlider(0, 10, 6,0.1);
  
-  slider3 = createSlider(0, 100, 1);
+  slider2 = createSlider(0, 10, 1,0.1);
  
-  slider4 = createSlider(0, 100, 1);
+  slider3 = createSlider(0, 100, 1,0.1);
+ 
+  slider4 = createSlider(0, 100, 1,0.1);
 
 //random scene  
-  slider5 = createSlider(1, 10, 2);
+  slider5 = createSlider(1, 10, 2,0.1);
 
-  slider6 = createSlider(3, 10, 6);
+  slider6 = createSlider(3, 10, 6,0.1);
 
-  slider7 = createSlider(0, 24, 1);
+  slider7 = createSlider(0, 24, 1 ,0.1);
 
   //idk
-  slider8 = createSlider(0, 255, 230);
+  slider8 = createSlider(0, 4, 0,0.1);
   slider9 = createSlider(0, 255, 34);
 
   checkbox = createCheckbox('Visualiser', true);
@@ -104,13 +111,27 @@ function draw() {
 
   background(34);
   stroke(barva1);
- 
 
-translate (windowWidth / 5, windowHeight / 5.2);
+strokeWeight(0);
+fill (255);
+  textSize(24);
+  textFont('Georgia');
+  text(val, 0, 300);
+  text(val2, 30, 300);
+  text(val3, 60, 300);
+  text(val4, 120, 300);
+  text(val5, 170, 300);
+  text(val6, 200, 300);
+  text(val7, 240, 300);
+  text(val8, 310, 300);
+  text(val9, 400, 300);
+
+translate (windowWidth /2 , windowHeight/2);
   beginShape();
+  rotate (val8);
   for (i = 0; i < vol.length; i++) {
     strokeWeight(val5);
-    point(0, map(vol[i], 0, 120, height /val2, val9));
+    point(0, map(vol[i], 0, 120, vol[i] /val2, val9));
     point(0, map(vol[i], 0, 25, height /10, val3));rotate ( val7);
     point(0, map(vol[i], 0, 120, height /10, val4));
     
@@ -122,12 +143,11 @@ translate (windowWidth / 5, windowHeight / 5.2);
     //rotate (PI /2 );
   }
 
-
- 
+  
 
 }
 
-//function windowResized() {
-  //resizeCanvas(windowWidth / 2.5, windowHeight / 2.7);
-//}
+function windowResized() {
+  resizeCanvas(windowWidth -10  , windowHeight -12);
+}
 

@@ -11,15 +11,10 @@
 
 
 
-body                  { background-color: #222222; font-family: 'Share Tech Mono', monospace; color: #c8c8c8;}
-.wrapper              { top: 50%; left: 50%; margin-top: -20%; margin-left: -40%; width: 80%; height: 40%;}
-.underdasea           { margin-top: 52.5%; margin-left: 9.6%; width: 81%; height: 40px; opacity: 50%;}
-.playerleft           { padding-left: 2px; padding-top: 3px; position: absolute; top: 50%; left: 50%; margin-top: -20%; margin-left: -40%;  width: 40%; height: 40%; 
-                      border-color: #c8c8c8; border-width: 1px; border-style: dashed; background-color: #222222;transition:background-color 1s; transition-timing-function: ease;}
-.playerright          { position: absolute; padding-left: 2px; padding-top: 3px; top: 50%; left: 90%; margin-top: -20%; margin-left: -40%;  width: 40%;  height: 40%;
-                      background-color: #222222; border-width: 1px; border-style: dashed; transition:background-color 1s; transition-timing-function: ease;}
-.playerchungus        { padding-left: 2px; padding-top: 3px; position: absolute; top: 50%; left: 50%; margin-top: -20%; margin-left: -40%; width: 80%; height: 40%;}
-.underlineplayer      { margin: -2px;width: 100%;  border-width: 1px; border-style: dashed; border-top: hidden; border-left: hidden; border-right: hidden;;}
+body                  { background-color: #222222; font-family: 'Share Tech Mono', monospace; color: #c8c8c8; overflow: hidden;}
+.wrapper              { top: 50%; left: 50%; margin-top: -10%; margin-left: -20%; width: 80%; height: 60%;}
+.player               { }
+.nothing              {margin: 0; padding: 0; position: absolute;}
 
 
 /* =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=   =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^= */
