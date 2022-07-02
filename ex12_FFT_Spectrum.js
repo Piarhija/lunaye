@@ -52,7 +52,7 @@ function setup() {
   slider4 = createSlider(0, 100, 1,0.1);
 
 //random scene  
-  slider5 = createSlider(1, 10, 2,0.1);
+  slider5 = createSlider(1, 500, 2,1);
 
   slider6 = createSlider(3, 10, 6,0.1);
 
@@ -61,26 +61,19 @@ function setup() {
   //idk
   slider8 = createSlider(0, 4, 0,0.1);
   slider9 = createSlider(0, 255, 340.1);
+// how many dots
+  slider10 = createSlider(20, 2000, 350, 1);
+  slider11 = createSlider(0, 600, 400, 1);
 
   
 
   checkbox = createCheckbox('RUN', true);
   checkbox.changed(myCheckedEvent);
-  checkbox.position(8, 210);
+  checkbox.position(8, windowHeight -50);
 
   checkbox2 = createCheckbox('Sliders', true);
   checkbox2.changed(myCheckedEvent2);
-  checkbox2.position(8, 230);
-
-  
-
- // faking sliderji
-
-
-
-
-
-
+  checkbox2.position(8, windowHeight -30);
 
   
 
@@ -100,9 +93,11 @@ function draw() {
   slider7.position(val10, 150);
   slider8.position(val10, 170);
   slider9.position(val10, 190);
+  slider10.position(val10, 210);
+  slider11.position(val10, 230);
 
   
-console.log(val10);
+
 
   
   //slider.position(windowWidth / 20, windowHeight / 1.3);
@@ -123,6 +118,9 @@ console.log(val10);
   let val8 = slider8.value();
   let val9 = slider9.value();
 
+  let valdots = slider10.value();
+  let val11 = slider11.value();
+
 
   slider.addClass('govedo');
   slider2.addClass('govedo');
@@ -133,6 +131,8 @@ console.log(val10);
   slider7.addClass('govedo');
   slider8.addClass('govedo');
   slider9.addClass('govedo');
+  slider10.addClass('govedo');
+  slider11.addClass('govedo');
 
 
 
@@ -154,15 +154,22 @@ fill (255);
 //  text(val8, 310, 300);
 //  text(val9, 400, 300);
 
-
 translate (windowWidth /2 , windowHeight/2);
+
+
+
+
   beginShape();
   rotate (val8);
-  for (i = 0; i < vol.length; i++) {
-    strokeWeight(val5);
-    point(0, map(vol[i], 0, 120, vol[i] /val2, val9));
-    point(0, map(vol[i], 0, 25, height /10, val3));rotate ( val7);
-    point(0, map(vol[i], 0, 120, height /10, val4));
+  for (i = 0; i < valdots; i++) {
+    strokeWeight(2);
+    point(0, map(vol[20], 0, 120, val11 , 1));
+   point(0, map(vol[i], 0, 120, vol[i] /val2, val9) +val5);
+   point(0, map(vol[i], 0, 25, height /10, val3)+val5);rotate ( val7);
+   point(0, map(vol[i], 0, 120, height /10, val4)+val5);
+
+    
+    
     
    
     rotate (PI / val6);
@@ -172,9 +179,9 @@ translate (windowWidth /2 , windowHeight/2);
     //rotate (PI /2 );
    
   }
-
   
 
+  
 }
 
 function windowResized() {
