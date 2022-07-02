@@ -14,10 +14,18 @@
 body                  { background-color: #222222; font-family: 'Share Tech Mono', monospace; color: #c8c8c8; overflow: hidden;}
 .wrapper              { top: 50%; left: 50%; margin-top: -10%; margin-left: -20%; width: 80%; height: 60%;}
 .player               { background-color: #c8c8c8; color: #222222 ;}
-.nothing              {margin: 0; padding: 0; position: absolute;}
+.nothing              { margin: 0; padding: 0; position: absolute;}
+.about                { z-index: 999; position: absolute; right: 0; bottom: 0; margin-right: 10px; margin-bottom: 10px;}
+canvas                { z-index: -1;}
+.abouttxt             { margin: 100px; }
+
+@media only screen and (max-width: 1000px) {body {overflow: visible;} .abouttxt { margin: 10px; }}
 
 
 /* =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=   =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^= */
+
+/* slider styling */
+
 input[type=range].govedo {
     width: 100px;
     margin: -1.05px 0;
