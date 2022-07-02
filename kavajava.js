@@ -16,6 +16,7 @@ let checkbox;
 var barva1 = 250;
 
 var val10 = 8;
+var sliderval = 110;
 
 
 function myCheckedEvent() {
@@ -28,9 +29,11 @@ function myCheckedEvent() {
 
 function myCheckedEvent2() {
   if (checkbox2.checked()) {
-    val10 = 8
+    val10 = 8;
+    sliderval = 110;
   } else {
     val10 = -800;
+    sliderval = 0;
    
   }
 }
@@ -94,27 +97,12 @@ function setup() {
 function draw() {
   let vol = fft.analyze();
  
-  slider.position(val10, 30);
-  slider2.position(val10, 50);
-  slider3.position(val10, 70);
-  slider4.position(val10, 90);
-  slider5.position(val10, 110);
-  slider6.position(val10, 130);
-  slider7.position(val10, 150);
-  slider8.position(val10, 170);
-  slider9.position(val10, 190);
-  slider10.position(val10, 210);
-  slider11.position(val10, 230);
+  background(34);
+  stroke(barva1);
 
-  
+strokeWeight(0);
+fill (255);
 
-
-  
-  //slider.position(windowWidth / 20, windowHeight / 1.3);
-  
-  
-
- 
 
   let val = slider.value();
   let val2 = slider2.value();
@@ -145,24 +133,38 @@ function draw() {
   slider11.addClass('govedo');
 
 
+  textSize(14);
+  textFont('roboto');
 
-  background(34);
-  stroke(barva1);
+  slider.position(val10, 30);  text(val, sliderval, 16);
+  slider2.position(val10, 50); text(val2, sliderval, 36);
+  slider3.position(val10, 70); text(val3, sliderval, 56);
+  slider4.position(val10, 90); text(val4, sliderval, 76);
+  slider5.position(val10, 110); text(val5, sliderval, 96);
+  slider6.position(val10, 130); text(val6, sliderval, 116);
+  slider7.position(val10, 150); text(val7, sliderval, 136);
+  slider8.position(val10, 170); text(val8, sliderval, 156);
+  slider9.position(val10, 190); text(val9, sliderval, 176);
+  slider10.position(val10, 210); text(valdots, sliderval, 196);
+  slider11.position(val10, 230); text(val11, sliderval, 216);
 
-strokeWeight(0);
-fill (255);
 
-//  textSize(24);
-// textFont('Georgia');
-//  text(val, 0, 300);
-//  text(val2, 30, 300);
-//  text(val3, 60, 300);
-//  text(val4, 120, 300);
-//  text(val5, 170, 300);
-//  text(val6, 200, 300);
-//  text(val7, 240, 300);
-//  text(val8, 310, 300);
-//  text(val9, 400, 300);
+
+
+
+
+  
+  //slider.position(windowWidth / 20, windowHeight / 1.3);
+  
+  
+
+ 
+
+
+ 
+
+
+
 
 translate (windowWidth /2 , windowHeight/2);
 
