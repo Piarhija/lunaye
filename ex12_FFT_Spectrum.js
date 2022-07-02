@@ -18,9 +18,9 @@ function myCheckedEvent() {
 
 function myCheckedEvent2() {
   if (checkbox2.checked()) {
-    let val10 = 8;
+    val10 = 8
   } else {
-    let val10 = -800;
+    val10 = -800;
    
   }
 }
@@ -62,13 +62,13 @@ function setup() {
   slider8 = createSlider(0, 4, 0,0.1);
   slider9 = createSlider(0, 255, 340.1);
 
-  slider10 = createSlider(0, 255, 340.1);
+  
 
   checkbox = createCheckbox('RUN', true);
   checkbox.changed(myCheckedEvent);
   checkbox.position(8, 210);
 
-  checkbox2 = createCheckbox('Sliders', false);
+  checkbox2 = createCheckbox('Sliders', true);
   checkbox2.changed(myCheckedEvent2);
   checkbox2.position(8, 230);
 
