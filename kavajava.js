@@ -19,6 +19,7 @@ var val10 = 8;
 var sliderval = 110;
 
 
+
 function myCheckedEvent() {
   if (checkbox.checked()) {
     loop();
@@ -56,29 +57,31 @@ function setup() {
 
 
 
-  slider = createSlider(0, 10, 6,0.1);
+  slider = createSlider(0, 10, random(10),0.1);
  
-  slider2 = createSlider(0, 10, 1,0.1);
+  slider2 = createSlider(0, 10, random(10),0.1);
  
-  slider3 = createSlider(0, 100, 1,0.1);
+  slider3 = createSlider(0, 100, random(100),0.1);
  
-  slider4 = createSlider(0, 100, 1,0.1);
+  slider4 = createSlider(0, 100, random(100),0.1);
 
 //random scene  
-  slider5 = createSlider(1, 500, 2,1);
+  slider5 = createSlider(1, 500, random(500),1);
 
-  slider6 = createSlider(3, 10, 6,0.1);
+  slider6 = createSlider(3, 10, random(10),0.1);
 
-  slider7 = createSlider(0, 24, 1 ,0.1);
+  slider7 = createSlider(0, 24, random(24) ,0.1);
 
   //idk
-  slider8 = createSlider(0, 4, 0,0.1);
-  slider9 = createSlider(0, 255, 340.1);
+  slider8 = createSlider(0, 4, random(4),0.1);
+  slider9 = createSlider(0, 420, random(420),0.1);
 // how many dots
   slider10 = createSlider(20, 2000, 350, 1);
-  slider11 = createSlider(0, 600, 400, 1);
+  slider11 = createSlider(0, 600, random(400), 1);
 
-  
+
+
+
 
   checkbox = createCheckbox('RUN', true);
   checkbox.changed(myCheckedEvent);
